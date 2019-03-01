@@ -25,7 +25,7 @@ console.log('string'*9);
 let something;
 console.log(something);
 
-let person = {
+let person = {   // Объект
     name: "John",
     age: 25,
     isMarried: true
@@ -35,7 +35,7 @@ console.log(person.isMarried);
 
 console.log(person["name"]);
 
-let arr = ['plu.png', 'orange.jpg', 'apple.bmp'];
+let arr = ['plu.png', 'orange.jpg', 'apple.bmp']; // МАссив
 
 console.log(arr[0]);
 
