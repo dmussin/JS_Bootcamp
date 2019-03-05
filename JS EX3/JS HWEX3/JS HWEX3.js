@@ -4,7 +4,6 @@ let money, time;
 
 function start() {
 
-    money = +prompt("Ваш бюджет на месяц?", "" );
     time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
     while(isNaN(money) || money == "" || money == null) {
@@ -15,9 +14,6 @@ function start() {
 
 start(); 
 
-
-console.log(money);
-console.log(time);
 
 let appData = {
     budget: money, 
@@ -40,7 +36,7 @@ function choseExpenses() {
              console.log("done");
          appData.expenses[a] = b;
       } else {
-      i = i - 1;
+      i = i --;
       }
     }
 }
@@ -56,7 +52,7 @@ function chooseOptExpenses(){
              console.log("done");
         appData.optionalExpenses[num] = c;
     } else {
-        i = i - 1;
+        i = i--;
     }
 }
 }
@@ -64,7 +60,7 @@ function chooseOptExpenses(){
 chooseOptExpenses();
 
 function detectDayBudget() {
-    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    appData.moneyPerDay = (appData.budget / 30).toFixed(1);
 }
 detectDayBudget();
 
@@ -88,7 +84,7 @@ function checkSavings() {
         let save = +prompt("Кавова сумма накоплений?"), 
             percent = +prompt("Под какой процент?");
 
-        appData.monthIncome = (save/100/12*percent).toFixed();
+        appData.monthIncome = (save/100/12*percent);
         alert("Доход в месяц с вашего депозита: " + appData.monthIncome);
     }
 }
