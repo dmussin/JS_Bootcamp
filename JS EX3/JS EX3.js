@@ -76,12 +76,13 @@ function learnJS(lang, callback) {
     callback();
 }
 
- function done(){
-     console.log("Я пройду завтра новый урок");
- }
 
 learnJS("JavaScript", function() {
     console.log("я прошел 3 урок");
 });
+
+function done(){
+    console.log("Я пройду завтра новый урок");
+}
 
 learnJS("HTML", done);
