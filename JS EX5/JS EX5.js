@@ -150,10 +150,17 @@ div.classList.add('black');
 
 // document.body.appendChild(div);
 // wrapper.appendChild(div);
+
+// div.innerHTML = '<h1>Hello World!</h1>';
+
+div.textContent = "Hello World";
+
 document.body.insertBefore(div, circle[0]);
 
 document.body.removeChild(circle[1]);
 wrapper.removeChild(heart[1]);
+
+document.body.replaceChild(btn[1], circle[1]);
 
 console.log(div);
 
